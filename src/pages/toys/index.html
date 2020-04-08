@@ -1,28 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico" />
-    <title>Игрушки</title>
-  </head>
-  <body>
-    @@include('header/index.html')
-    <main class="toys-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Игрушки</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице игрушек
-        </h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Toys</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/index.html"
+  })
+  <main>
+    @@include('pagetitle/index.html', {
+    "title": "toy for kids",
+    "tab": "active-tab",
+    "page1": "catalog"
+    "secondpage": "pasive-tab"
+    "page2": "toys"
+    })
+
+    <div class="buy-form">
+      <form action="https://form-data-dl.herokuapp.com/api/messages" class="buy container" method="GET">
+        <div class="cost-range">
+          <label class="label" for="cost">Cost</label>
+          <input type="range" id="cost" name="cost" min="0" max="500" value="100">
+          <div class="range">
+            <span class="form-number">0</span>
+            <span class="form-number">500</span>
+          </div>
+        </div>
+
+        <fieldset class="buy-fieldset fieldset-color">
+          <legend class="label">Color</legend>
+          <label class="checkbox-label">
+            <input class="checkbox hidden" type="checkbox" name="color" value="black" checked>
+            <span class="indicator"></span>
+            Black
+          </label>
+          <label class="checkbox-label">
+            <input class="checkbox hidden" type="checkbox" name="color" value="blue">
+            <span class="indicator"></span>
+            Blue
+          </label>
+          <label class="checkbox-label">
+            <input class="checkbox hidden" type="checkbox" name="color" value="green">
+            <span class="indicator"></span>
+            Green
+          </label>
+          <label class="checkbox-label">
+            <input class="checkbox hidden" type="checkbox" name="color" value="white">
+            <span class="indicator"></span>
+            White
+          </label>
+        </fieldset>
+
+        <fieldset class="buy-fieldset fieldset-shipping">
+          <legend class="label">Delivery</legend>
+          <label class="radio-label">
+            <input class="radio hidden" type="radio" name="delivery" value="free">
+            <span class="radio-indicator"></span>
+            Free shipping
+          </label>
+          <label class="radio-label">
+            <input class="radio hidden" type="radio" name="delivery" value="fast" checked>
+            <span class="radio-indicator"></span>
+            Fast shipping
+          </label>
+        </fieldset>
+
+        <fieldset class="buy-fieldset">
+          <legend class="label">Amount</legend>
+          <div class="amount-d">
+            <label class="amount-label">
+              <span class="amount-value"> 0-5 </span>
+              <input class="amount hidden" type="radio" name="amount" value="small" checked>
+              <span class="amount-indicator"></span>
+            </label>
+            <label class="amount-label">
+              <span class="amount-big-value"> 10-20 </span>
+              <input class="amount hidden" type="radio" name="amount" value="middle">
+              <span class="amount-indicator"></span>
+            </label>
+            <label class="amount-label">
+              <span class="amount-big-value"> 20-50 </span>
+              <input class="amount hidden" type="radio" name="amount" value="large">
+              <span class="amount-indicator"></span>
+            </label>
+          </div>
+        </fieldset>
+        <button type="submit" class="button apply-button button_black"><span class="button-text">Apply</span></button>
+      </form>
+    </div>
+
+    <section class="container">
+      <ul class="products list_none">
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-1.jpg" alt="sharky">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">SHARKY BEAN BAG CHAIR COVER</span>
+          </a>
+          <span class="product-price">$60.00 USD</span>
+        </li>
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-2.jpg" alt="brass">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">BRASS DECO FRAMES</span>
+          </a>
+          <span class="product-price">$66.00 USD</span>
+        </li>
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-3.jpg" alt="cibo">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">CIBO FULL APRON</span>
+          </a>
+          <span class="product-price">$60.00 USD</span>
+        </li>
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-4.jpg" alt="gumball machine">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">GATCHA GATCHA GUMBALL MACHINE</span>
+          </a>
+          <span class="product-price">$56.00 USD</span>
+        </li>
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-5.jpg" alt="candle">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">CHRISTMAS ADVENT SCENTED CANDLE</span>
+          </a>
+          <span class="product-price">$29.00 USD</span>
+        </li>
+        <li class="one-product">
+          <a class="product-link" href="#"><img class="product-img" src="/images/toy-6.jpg" alt="tea light">
+            <div class="learn-more">
+              <span class="learn-more-text">LEARN MORE</span>
+            </div>
+            <span class="product-name">TANGLE SPINNING TEA LIGHT</span>
+          </a>
+          <span class="product-price">$56.00 USD</span>
+        </li>
+      </ul>
+    </section>
+    <div class="pages container">
+      <a class="left" href="#"><img src="/images/page-left.png" alt=""></a>
+      <div class="numbers">
+        <a class="numder numder-one" href="#">1</a>
+        <a class="numder" href="#">2</a>
+        <a class="numder" href="#">3</a>
+        <a class="numder" href="#">4</a>
       </div>
-    </main>
-    @@include('footer/index.html')
-    <script src="script.js"></script>
-  </body>
+      <a class="right" href="#"><img src="/images/page-right.png" alt=""></a>
+    </div>
+  </main>
+  @@include('footer/index.html')
+  <script src="script.js"></script>
+</body>
+
 </html>

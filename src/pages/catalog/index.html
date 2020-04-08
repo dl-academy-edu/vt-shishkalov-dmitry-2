@@ -15,12 +15,16 @@
 </head>
 
 <body>
-  @@include('header/index.html')
+  @@include('header/index.html', {
+  "link" : "/index.html"
+  })
   <main>
     @@include('pagetitle/index.html', {
     "title": "category products",
     "tab": "passive-tab",
     "page1": "catalog"
+    <!-- "secondpage": ""
+    "page2": "" -->
     })
 
     <section class="category container">
