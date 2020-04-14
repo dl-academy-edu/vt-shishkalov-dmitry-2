@@ -56,23 +56,19 @@
       <ul class="categories list_none">
         @@include('category/index.html', {
         "class": "apparel-kids",
-        "text1": "apparel",
-        "text2": "kids"
+        "text1": "apparel kids"
         })
         @@include('category/index.html', {
         "class": "holiday-shop",
-        "text1": "holiday",
-        "text2": "shop"
+        "text1": "holiday shop"
         })
         @@include('category/index.html', {
         "class": "toys",
-        "text1": "toys",
-        "text2": ""
+        "text1": "toys"
         })
         @@include('category/index.html', {
         "class": "accessories",
-        "text1": "accessories",
-        "text2": ""
+        "text1": "accessories"
         })
       </ul>
       <div class="category-footer">
@@ -165,7 +161,15 @@
     </div>
   </main>
   @@include('footer/index.html')
-  <script src="script.js"></script>
+  <div class="modal-window modal-window-close modal-window_js">
+    @@include('form/index.html', {
+    "input-class": "form-input form-input_js",
+    "placeh": "",
+    "checked": "",
+    "disabled": "disabled"
+    })
+  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
