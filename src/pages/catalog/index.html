@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Каталог</title>
-  </head>
-  <body>
-    @@include('header/index.html')
-    <main class="catalog-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Каталог</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице каталога
-        </h2>
-      </div>
-    </main>
-    @@include('footer/index.html')
-    <script src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalog</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/index.html"
+  })
+  <main>
+    @@include('pagetitle/index.html', {
+    "title": "category products",
+    "tab": "passive-tab",
+    "page1": "catalog",
+    "secondpage": "",
+    "page2": ""
+    })
+
+    <section class="category container">
+      <ul class="category-top list_none">
+        @@include('category/index.html', {
+        "class": "apparel-kids",
+        "text1": "apparel kids"
+        })
+        @@include('category/index.html', {
+        "class": "holiday-shop",
+        "text1": "holiday shop"
+        })
+        @@include('category/index.html', {
+        "class": "toys",
+        "text1": "toys"
+        })
+        @@include('category/index.html', {
+        "class": "accessories",
+        "text1": "accessories"
+        })
+        @@include('category/index.html', {
+        "class": "sale",
+        "text1": "sale"
+        })
+        @@include('category/index.html', {
+        "class": "apparel-adults",
+        "text1": "apparel adults"
+        })
+      </ul>
+    </section>
+
+    <section class="description container">
+      <h2 class="description-title">
+        Product Description
+      </h2>
+      <p class="description-text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost
+        really cry. You can even
+        bathe her, just like a little sister.</p>
+      <p class="description-text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright.
+        Such a doll will be an
+        excellent choice for a gift for a girl from 4 years old.</p>
+      <p class="description-text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for
+        water, a pair of hairpins
+        and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+    </section>
+  </main>
+  @@include('footer/index.html')
+  <script src="index.js"></script>
+</body>
+
 </html>

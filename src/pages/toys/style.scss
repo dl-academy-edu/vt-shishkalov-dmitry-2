@@ -1,3 +1,326 @@
-main.toys-main {
- padding: 30px 0;
+.catalog{
+    padding-left: 20px;
+  }
+  
+  /* form */
+  
+  .buy-form{
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .buy-form::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(125, 151, 218, 0.2);
+    z-index: -1;
+  }
+  
+  .buy{
+    display: flex;
+    padding-top: 36px;
+    padding-bottom: 24px;
+  }
+  
+  .label{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+    padding-bottom: 15px;
+  }
+  
+  .cost-range{
+    width: 207px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .range{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-number{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+  }
+  
+  .buy-fieldset{
+    border: none;
+    padding: 0;
+  }
+  
+  .fieldset-color{
+    display: flex;
+    flex-direction: column;
+    margin-left: 94px;
+  }
+  
+  .checkbox-label{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+  
+  .indicator{
+    display: flex;
+    border: 2px solid #C29974;
+    border-radius: 3px;
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+  }
+  
+  .checkbox-label:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+  
+  .checkbox:disabled{
+    opacity: .5;
+  }
+  
+  .checkbox:focus + .indicator{
+    border: 2px solid #C29974;
+  }
+  
+  .checkbox:checked + .indicator::before{
+    content: ' ';
+    background: url('/images/checked.png');
+    margin: auto;
+    width: 15px;
+    height: 15px;
+  }
+  
+  .radio-label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .radio-indicator{
+    display: flex;
+    border: 2px solid #C29974;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .radio-label:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+  
+  .radio:disabled{
+    opacity: .5;
+  }
+  
+  .radio:focus + .radio-indicator{
+    border: 2px solid #C29974;
+  }
+  
+  .radio:checked + .radio-indicator::before{
+    content: ' ';
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    background: #C29974;
+    border-radius: 50%; 
+  }
+  
+  .amount-d{
+    display: flex;
+  }
+  
+  .amount-label{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .amount-value{
+    position: absolute;
+    top: 7px;
+    left: 28px;
+  }
+  
+  .amount-big-value{
+    position: absolute;
+    top: 7px;
+    left: 19px;
+  }
+  
+  .amount-indicator{
+    display: flex;
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+  }
+  
+  .amount:disabled{
+    opacity: .5;
+  }
+  
+  .amount:checked + .amount-indicator::before{
+    content: ' ';
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #F3D0DB;
+  }
+  
+  .amount:hover + .amount-indicator::before{
+    content: ' ';
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #EDDEEB;
+    cursor: pointer;
+  }
+  
+  .fieldset-shipping{
+    display: flex;
+    flex-direction: column;
+    margin-left: 124px;
+    margin-right: 69px;
+  }
+  
+  .apply-button{
+    margin-left: 60px;
+    margin-top: 37px;
+    height: 40px;
+  }
+  
+  /* product */
+  
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .one-product{
+    position: relative;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .learn-more{
+    content: ' ';
+    position: absolute;
+    width: 207px;
+    height: 207px;
+    top: 89px;
+    right: 86px;
+    background-color: #E5EAF8;
+    opacity: 0;
+  }
+  
+  .learn-more-text{
+    content: ' ';
+    position: absolute;
+    top: 82px;
+    right: 12px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #1E0606;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+  }
+  
+  .learn-more:hover{
+    opacity: 0.9;
+  }
+  
+  .learn-more:active{
+    opacity: 0.67;
+  }
+  
+  .product-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-img{
+    height: 385px;
+  }
+  
+  .product-name{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+    padding-top: 30px;
+  }
+  
+  .product-price{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+    padding-top: 15px;
+  }
+  
+  .pages{
+    margin-top: 40px;
+  }
+
+
+  /* pages потом перенести в компонент*/
+
+.pages{
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numder{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1E0606;
+  margin-right: 64px;
+}
+
+.numder:hover{
+  opacity: .5;
+}
+
+.numder-one{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #C29974;
+  margin-right: 64px;
 }

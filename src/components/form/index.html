@@ -1,0 +1,37 @@
+<form class="registration" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+
+  <div class="large-row">
+    <label for="form-name" class="form-label">Name</label>
+    <input type="text" class="@@input-class" id="form-name" name="name" placeholder="@@placeh">
+  </div>
+
+  <div class="large-row">
+    <div class="little-row">
+      <label for="form-phone" class="form-label">Phone</label>
+      <input type="tel" class="form-input" id="form-phone" name="phone">
+    </div>
+
+    <div class="little-row">
+      <label for="form-email" class="form-label">E-mail</label>
+      <input type="email" class="form-input" id="form-email" name="email">
+    </div>
+  </div>
+
+  <div class="large-row">
+    <label for="form-message" class="form-label">Message</label>
+    <textarea class="large-row form-input form-area" name="message" id="form-message"></textarea>
+  </div>
+
+  <div class="large-row">
+    <label class="checkbox-label">
+      <input class="checkbox hidden" type="checkbox" name="color" value="black" @@checked>
+      <span class="indicator"></span>
+      By clicking on the button, you consent to the processing of your personal data
+    </label>
+  </div>
+
+  <button type="submit" class="button button_black" @@disabled>
+    <span class="button-text">SUBMIT</span>
+  </button>
+  <button type="button" class="button-close button-close_js">X</button>
+</form>
