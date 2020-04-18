@@ -1,36 +1,42 @@
 .button-text{
-  display: inline-block;
-  padding: 9px 22px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+    display: inline-block;
+    padding: 9px 22px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .button_black{
-  background-color: #000000;
-  display: inline-block;
-  text-align: center;
-  border: none;
+    background-color: #000000;
+    display: inline-block;
+    text-align: center;
+    border: none;
 }
 
 .button_black:hover{
-  background-color: #C29974;
-  cursor: pointer;
+    background-color: #C29974;
+    cursor: pointer;
 }
 
 .button_black:active{
-  background-color: #CFAF91;
+    background-color: #CFAF91;
 }
 
 .button_black:disabled{
-  background-color: #C1C1C1;
-  cursor: default;
+    background-color: #C1C1C1;
+    cursor: default;
 }
 
 .button-text_disabled{
-  color: #E1E1E1;
+    color: #E1E1E1;
+}
+
+.apply-button{
+    margin-left: 60px;
+    margin-top: 37px;
+    height: 40px;
 }

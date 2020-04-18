@@ -29,9 +29,9 @@
       By clicking on the button, you consent to the processing of your personal data
     </label>
   </div>
-
-  <button type="submit" class="button button_black" @@disabled>
-    <span class="button-text">SUBMIT</span>
-  </button>
-  <button type="button" class="button-close button-close_js">X</button>
+  @@include('button/index.html', {
+  "type": "submit",
+  "text": "SUBMIT"
+  })
+  <button type="button" class="button-close @@add-class button-close_js">X</button>
 </form>

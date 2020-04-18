@@ -97,7 +97,7 @@
   
   .checkbox:checked + .indicator::before{
     content: ' ';
-    background: url('/images/checked.png');
+    background: url('/static/images/checked.png');
     margin: auto;
     width: 15px;
     height: 15px;
@@ -197,13 +197,7 @@
     margin-left: 124px;
     margin-right: 69px;
   }
-  
-  .apply-button{
-    margin-left: 60px;
-    margin-top: 37px;
-    height: 40px;
-  }
-  
+
   /* product */
   
   .products{

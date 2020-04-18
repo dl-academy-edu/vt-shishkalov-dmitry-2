@@ -96,7 +96,11 @@
             </label>
           </div>
         </fieldset>
-        <button type="submit" class="button apply-button button_black"><span class="button-text">Apply</span></button>
+        @@include('button/index.html', {
+        "type": "submit",
+        "text": "Apply",
+        "add-class": "apply-button"
+        })
       </form>
     </div>
 
