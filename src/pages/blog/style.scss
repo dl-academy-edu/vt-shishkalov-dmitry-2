@@ -1,60 +1,60 @@
 
 .paper{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: -5px;
-}
+  &__card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -5px;
+  }
 
-.paper_item{
-  width: 380px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
+  &__item{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 
-.paper-img{
-  height: 220px;
-}
+  &__img{
+    height: 220px;
+  }
 
-.paper-date{
-  padding-top: 16px;
-  padding-bottom: 10px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #818181;
-}
+  &__date{
+    padding-top: 16px;
+    padding-bottom: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #818181;
+  }
 
-.paper-title{
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
-  color: #1E0606;
-}
+  &__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1E0606;
+    &:hover{
+      text-decoration-line: underline;
+    }
+    &:active{
+      text-decoration-line: underline;
+    }
+  }
 
-.paper-title:hover{
-  text-decoration-line: underline;
-}
-
-.paper-title:active{
-  text-decoration-line: underline;
-}
-
-.paper-text{
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  color: #1E0606;
+  &__text{
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1E0606;
+  }
 }
 
 /* pages потом перенести в компонент*/
@@ -64,30 +64,20 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
-}
-
-.numder{
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #1E0606;
-  margin-right: 64px;
-}
-
-.numder:hover{
-  opacity: .5;
-}
-
-.numder-one{
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #C29974;
-  margin-right: 64px;
+  &__numder{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1E0606;
+    margin-right: 64px;
+    &:hover{
+      opacity: .5;
+    }
+    &_one{
+      color: #C29974;
+    }
+  }
 }

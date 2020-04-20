@@ -97,15 +97,13 @@
     width: 31px;
     height: 3px;
     border: none;
-    &_active{
-      background: rgba(30, 6, 6, 0.6);
-    }
-    &_passive{
-      margin-top: 11px;
+    margin-top: 11px;
       background: #D6CAC2;
       &:hover{
         background-color: #725F5B;
       }
+    &_active{
+      background: rgba(30, 6, 6, 0.6);
     }
   }
 }
@@ -240,7 +238,7 @@
 
 /* add-inf */
 
-.add-inf{
+.add-information{
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
@@ -308,6 +306,10 @@
   display: flex;
 }
 
+.modal-window-close{
+  display: none;
+}
+
 .registration{
   margin: auto;
   position: relative;
@@ -324,24 +326,21 @@
   background-color: transparent;
   color: #FFFFFF;
   cursor: pointer;
+  &:hover{
+    opacity: 0.5;
+  }
+  &:active{
+    opacity: 0.5;
+  }
 }
 
-.button-close:hover{
-  opacity: 0.5;
-}
-
-.button-close:active{
-  opacity: 0.3;
-}
-
-.modal-window-close{
-  display: none;
-}
-
-.header-logo:hover{
-  opacity: 1;
-}
-
-.header-logo:active{
-  opacity: 1;
+.header{
+  &__logo{
+    &:hover{
+      opacity: 1;
+    }
+    &:active{
+      opacity: 1;
+    }
+  }
 }

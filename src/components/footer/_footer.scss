@@ -17,6 +17,7 @@ footer{
   &__information{
     position: relative;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 100px;
   }
@@ -30,7 +31,6 @@ footer{
   }
 
   &__block{
-    margin-left: 0;
     &::after{
       content: ' ';
       position: absolute;
@@ -41,15 +41,13 @@ footer{
       background-color: #666666;
     }
 
-    &_custom{
-      margin-left: 242px;
+    &_centre{
       &::after{
         left: 400px;
       }
     }
 
-    &_connect{
-      margin-left: 233px;
+    &_right{
       &::after{
         left: 800px;
       }
@@ -101,7 +99,7 @@ footer{
     padding-top: 25px;
   }
 
-  &__social-link{
+  &__soc-link{
     margin-right: 10px;
     display: inline-flex;
     justify-content: center;

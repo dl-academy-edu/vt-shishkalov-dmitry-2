@@ -41,18 +41,17 @@
     &:active{
       opacity: .2;
     }
+    &_cont{
+      font-weight: bold;
+      margin-left: 23px;
+      margin-right: 0px;
+    }
   }
 
   &__list-search{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-  }
-
-  &__link-cont{
-    font-weight: bold;
-    margin-left: 23px;
-    margin-right: 0px;
   }
 
   &__search{
