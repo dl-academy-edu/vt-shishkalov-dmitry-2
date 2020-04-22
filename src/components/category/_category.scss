@@ -6,6 +6,8 @@
     height: 270px;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
   }
 
   &__link{
@@ -26,23 +28,22 @@
     }
   }
 
-  &__titles{
+  &__title{
     padding-right: 44px;
     padding-left: 44px;
     text-align: center;
+    &-text{
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 32px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      max-width: 292px;
+      text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+    }
   }
-
-  &__title{
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 32px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    max-width: 292px;
-    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-  }
-
+  
   &__theme{
     position: relative;
     &::before{
@@ -52,23 +53,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: url('/static/images/category-1.jpg');
       z-index: -1;
-    }
-    &_holiday-shop::before{
-      background: url('/static/images/category-2.jpg');
-    }
-    &_toys::before{
-      background: url('/static/images/category-3.jpg');
-    }
-    &_accessories::before{
-      background: url('/static/images/category-4.jpg');
-    }
-    &_sale::before{
-      background: url('/static/images/category-5.jpg');
-    }
-    &_apparel-adults::before{
-      background: url('/static/images/category-6.jpg');
     }
   }
 }

@@ -55,19 +55,23 @@
       <ul class="category__cards list-none">
         @@include('category/index.html', {
         "class": "category__theme",
-        "text1": "apparel kids"
+        "text1": "apparel kids",
+        "img": "/static/images/category-1.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_holiday-shop",
-        "text1": "holiday shop"
+        "class": "category__theme",
+        "text1": "holiday shop",
+        "img": "/static/images/category-2.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_toys",
-        "text1": "toys"
+        "class": "category__theme",
+        "text1": "toys",
+        "img": "/static/images/category-3.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_accessories",
-        "text1": "accessories"
+        "class": "category__theme",
+        "text1": "accessories",
+        "img": "/static/images/category-4.jpg"
         })
       </ul>
       <div class="category__footer">
@@ -161,8 +165,9 @@
   </main>
   @@include('footer/index.html')
   <div class="modal-window modal-window-close modal-window_js">
+    <button type="button" class="button-close button-close_js">X</button>
     @@include('form/index.html', {
-    "input-class": "form-input form-input_js",
+    "input-class": "registration__input form-input_js",
     "placeh": "",
     "checked": ""
     })

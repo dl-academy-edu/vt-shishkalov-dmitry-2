@@ -22,16 +22,23 @@
     display: flex;
     padding-top: 36px;
     padding-bottom: 24px;
-  }
-
-  &__form-label{
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    color: #1E0606;
-    margin-bottom: 15px;
+    &-label{
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1E0606;
+      margin-bottom: 15px;
+    }
+    &-number{
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1E0606;
+    }
   }
 
   &__cost-range{
@@ -45,18 +52,20 @@
     justify-content: space-between;
   }
 
-  &__form-number{
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: #1E0606;
-  }
-
   &__fieldset{
     border: none;
     padding: 0;
+    &_color{
+      display: flex;
+      flex-direction: column;
+      margin-left: 94px;
+    }
+    &_shipping{
+      display: flex;
+      flex-direction: column;
+      margin-left: 124px;
+      margin-right: 69px;
+    }
   }
   
   &__checkbox-label{
@@ -167,19 +176,6 @@
   }
 }
 
-.fieldset-shipping{
-  display: flex;
-  flex-direction: column;
-  margin-left: 124px;
-  margin-right: 69px;
-}
-
-.fieldset-color{
-  display: flex;
-  flex-direction: column;
-  margin-left: 94px;
-}
-
   /* product */
   
   .product{
@@ -265,7 +261,7 @@
 
   /* pages потом перенести в компонент*/
 
-  .pages{
+  .pagination{
     margin-top: 10px;
     margin-bottom: 50px;
     display: flex;

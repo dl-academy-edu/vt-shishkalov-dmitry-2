@@ -21,37 +21,40 @@
   <main>
     @@include('pagetitle/index.html', {
     "title": "category products",
-    "tab": "passive-tab",
-    "page1": "catalog",
-    "secondpage": "",
-    "page2": ""
+    "page": "catalog"
     })
 
     <section class="category container">
       <ul class="category__top list_none">
         @@include('category/index.html', {
         "class": "category__theme",
-        "text1": "apparel kids"
+        "text1": "apparel kids",
+        "img": "/static/images/category-1.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_holiday-shop",
-        "text1": "holiday shop"
+        "class": "category__theme",
+        "text1": "holiday shop",
+        "img": "/static/images/category-2.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_toys",
-        "text1": "toys"
+        "class": "category__theme",
+        "text1": "toys",
+        "img": "/static/images/category-3.jpg"
         })
         @@include('category/index.html', {
-        "class": "category__theme_accessories",
-        "text1": "accessories"
+        "class": "category__theme",
+        "text1": "accessories",
+        "img": "/static/images/category-4.jpg"
         })
         @@include('category/index.html', {
         "class": "category__theme_sale",
-        "text1": "sale"
+        "text1": "sale",
+        "img": "/static/images/category-5.jpg"
         })
         @@include('category/index.html', {
         "class": "category__theme_apparel-adults",
-        "text1": "apparel adults"
+        "text1": "apparel adults",
+        "img": "/static/images/category-6.jpg"
         })
       </ul>
     </section>

@@ -12,30 +12,25 @@
 
 .navigation{
   margin-bottom: 50px;
-}
-
-.active-tab{
-  font-family: "Crimson Text";
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  color: #1E0606;
-  padding-right: 20px;
-}
-
-.active-tab:hover{
-  opacity: 0.75;
-}
-
-.passive-tab{
-  font-family: "Crimson Text";
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  text-transform: capitalize;
-  color: #1E0606;
-  opacity: 0.5;
-  padding-left: 20px;
+  &__tab{
+    font-family: "Crimson Text";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;
+    padding-right: 20px;
+    &:hover{
+      opacity: 0.75;
+    }
+    &_passive{
+      text-transform: capitalize;
+      opacity: 0.5;
+      padding-right: 0;
+      padding-left: 20px;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
 }

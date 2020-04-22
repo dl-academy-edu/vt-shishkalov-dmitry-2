@@ -60,11 +60,10 @@
     top: 372px;
     width: 1177px;
     text-align: center;
-  }
-
-  &__footer-text{
-    display: inline-block;
-    padding: 11px;
+    &-text{
+      display: inline-block;
+      padding: 11px;
+    }
   }
 }
 
@@ -319,7 +318,8 @@
   width: 15px;
   height: 15px;
   position: absolute;
-  top: -3px;
+  top: 121px;
+  left: 1107px;
   font-size: 15px;
   right: -17px;
   border: none;

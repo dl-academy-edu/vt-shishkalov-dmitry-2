@@ -21,10 +21,7 @@
   <main>
     @@include('pagetitle/index.html', {
     "title": "blog",
-    "tab": "passive-tab",
-    "page1": "blog",
-    "secondpage": "",
-    "page2": ""
+    "page": "blog"
     })
 
     <section class="paper container">
@@ -91,17 +88,19 @@
       </ul>
     </section>
 
-    <div class="pages container">
-      <a href="#">
+    <div class="pagination container">
+      <a class="pagination__change pagination__change_back" href="#">
         <img src="/static/images/page-left.png" alt="">
       </a>
       <div>
-        <a class="pages__numder pages__numder_one" href="#">1</a>
-        <a class="pages__numder" href="#">2</a>
-        <a class="pages__numder" href="#">3</a>
-        <a class="pages__numder" href="#">4</a>
+        <a class="pagination__numder pagination__numder_one" href="#">1</a>
+        <a class="pagination__numder" href="#">2</a>
+        <a class="pagination__numder" href="#">3</a>
+        <a class="pagination__numder" href="#">4</a>
       </div>
-      <a href="#"><img src="/static/images/page-right.png" alt=""></a>
+      <a class="pagination__change pagination__change_forward" href="#">
+        <img src="/static/images/page-right.png" alt="">
+      </a>
     </div>
   </main>
   @@include('footer/index.html')

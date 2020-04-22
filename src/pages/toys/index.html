@@ -21,11 +21,9 @@
   <main>
     @@include('pagetitle/index.html', {
     "title": "toy for kids",
-    "tab": "active-tab",
-    "page1": "catalog",
-    "secondpage": "pasive-tab",
-    "page2": "toys"
+    "page": "toys"
     })
+    <!-- Переписать для этой страницы -->
 
     <div class="buy">
       <form action="https://form-data-dl.herokuapp.com/api/messages" class="buy__form container" method="GET">
@@ -38,7 +36,7 @@
           </div>
         </div>
 
-        <fieldset class="buy__fieldset fieldset-color">
+        <fieldset class="buy__fieldset buy__fieldset_color">
           <legend class="buy__form-label">Color</legend>
           <label class="buy__checkbox-label">
             <input class="buy__checkbox hidden" type="checkbox" name="color" value="black" checked>
@@ -62,7 +60,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="buy__fieldset fieldset-shipping">
+        <fieldset class="buy__fieldset buy__fieldset_shipping">
           <legend class="buy__form-label">Delivery</legend>
           <label class="buy__radio-label">
             <input class="buy__radio hidden" type="radio" name="delivery" value="free">
@@ -163,17 +161,19 @@
         </li>
       </ul>
     </section>
-    <div class="pages container">
-      <a href="#">
+    <div class="pagination container">
+      <a class="pagination__change pagination__change_back" href="#">
         <img src="/static/images/page-left.png" alt="">
       </a>
       <div>
-        <a class="pages__numder pages__numder_one" href="#">1</a>
-        <a class="pages__numder" href="#">2</a>
-        <a class="pages__numder" href="#">3</a>
-        <a class="pages__numder" href="#">4</a>
+        <a class="pagination__numder pagination__numder_one" href="#">1</a>
+        <a class="pagination__numder" href="#">2</a>
+        <a class="pagination__numder" href="#">3</a>
+        <a class="pagination__numder" href="#">4</a>
       </div>
-      <a href="#"><img src="/static/images/page-right.png" alt=""></a>
+      <a class="pagination__change pagination__change_forward" href="#">
+        <img src="/static/images/page-right.png" alt="">
+      </a>
     </div>
   </main>
   @@include('footer/index.html')
