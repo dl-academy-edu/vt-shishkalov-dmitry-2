@@ -21,31 +21,30 @@
   <main>
     <section class="poster container">
       <div class="slider">
-        <p class="slider-number">01</p>
-        <div class="slider-nav">
-          <button class="button button_active"></button>
-          <button class="button button_passive"></button>
-          <button class="button button_passive"></button>
-          <button class="button button_passive"></button>
+        <p class="slider__number">01</p>
+        <div class="slider__nav">
+          <button class="slider__button slider__button_active"></button>
+          <button class="slider__button"></button>
+          <button class="slider__button"></button>
+          <button class="slider__button"></button>
         </div>
       </div>
-      <div class="poster-text">
-        <h2 class="poster-title">
+      <div class="poster__text">
+        <h2 class="poster__title">
           THE OOH NOO COLLECTION
         </h2>
-        <span class="poster-design">
+        <span class="poster__design">
           Designed in Slovenia
         </span>
-        @@include('button/index.html', {
+        @@include('link/index.html', {
         "class": "button_js",
         "href": "#",
         "text": "EXPLORE NOW"
         })
       </div>
-      <img class="poster-img" src="/static/images/monster.png" alt="monster" />
-
-      <div class="section-footer">
-        <span class="section-footer-text">Free (continental) USA shipping on all orders of $100 USD or more!</span>
+      <img class="poster__img" src="/static/images/monster.png" alt="monster" />
+      <div class="poster__footer">
+        <span class="poster__footer-text">Free (continental) USA shipping on all orders of $100 USD or more!</span>
       </div>
     </section>
 
@@ -53,28 +52,32 @@
       <h2 class="section-title">
         Category Products
       </h2>
-      <ul class="categories list_none">
+      <ul class="category__cards list-none">
         @@include('category/index.html', {
-        "class": "apparel-kids",
-        "text1": "apparel kids"
+        "class": "category__theme",
+        "text1": "apparel kids",
+        "img": "/static/images/category-1.jpg"
         })
         @@include('category/index.html', {
-        "class": "holiday-shop",
-        "text1": "holiday shop"
+        "class": "category__theme",
+        "text1": "holiday shop",
+        "img": "/static/images/category-2.jpg"
         })
         @@include('category/index.html', {
-        "class": "toys",
-        "text1": "toys"
+        "class": "category__theme",
+        "text1": "toys",
+        "img": "/static/images/category-3.jpg"
         })
         @@include('category/index.html', {
-        "class": "accessories",
-        "text1": "accessories"
+        "class": "category__theme",
+        "text1": "accessories",
+        "img": "/static/images/category-4.jpg"
         })
       </ul>
-      <div class="category-footer">
-        <button class="category-button"><img src="/static/images/button-left.png" alt="left"></button>
-        <button class="category-button"><img src="/static/images/button-right.png" alt="right"></button>
-        <p class="category-text section-text">
+      <div class="category__footer">
+        <button class="category__button"><img src="/static/images/button-left.png" alt="left"></button>
+        <button class="category__button"><img src="/static/images/button-right.png" alt="right"></button>
+        <p class="category__text section-text">
           Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture
           for kids and adults.
         </p>
@@ -82,28 +85,28 @@
     </section>
 
     <section class="delivery container">
-      <img class="delivery-img" src="/static/images/delivery.jpg" alt="delivery" />
-      <div class="delivery-inf">
+      <img class="delivery__img" src="/static/images/delivery.jpg" alt="delivery" />
+      <div class="delivery__information">
         <h2 class="section-title">
           Delivery
         </h2>
-        <ul class="list_none">
-          <li><a class="delivery-link delivery-link_bold" href="#"> Delivery </a></li>
-          <li><a class="delivery-link" href="#"> Guarantee </a></li>
-          <li><a class="delivery-link" href="#"> Credit </a></li>
+        <ul class="list-none">
+          <li><a class="delivery__link delivery__link_bold" href="#"> Delivery </a></li>
+          <li><a class="delivery__link" href="#"> Guarantee </a></li>
+          <li><a class="delivery__link" href="#"> Credit </a></li>
         </ul>
-        <p class="delivery-text section-text">
+        <p class="delivery__text section-text">
           Some days i feel like i've been working on dlk my entire life and
           there are other days that i am completely shocked that four years have
           flown by. It's simply magical.
         </p>
-        <p class="delivery-text section-text">
+        <p class="delivery__text section-text">
           What started as an outlet to deal with the traumatic loss of my
           husband, dlk has now become a truly happy place for me and i have you
           and all of the beautiful designers that we work with to thank!
         </p>
-        @@include('button/index.html', {
-        "class": "delivery-button",
+        @@include('link/index.html', {
+        "class": "delivery__button",
         "href": "#",
         "text": "LEARN MORE"
         })
@@ -112,47 +115,47 @@
 
     <section class="partners container">
       <h2 class="hidden">Partners</h2>
-      <ul class="partners-list list_none">
+      <ul class="partners__list list-none">
         <li>
-          <a href="#"><img class="partner-img" src="/static/images/partner-1.png" alt="mail" /></a>
+          <a href="#"><img class="partner__img" src="/static/images/partner-1.png" alt="mail" /></a>
         </li>
         <li>
-          <a href="#"><img class="partner-img" src="/static/images/partner-2.png" alt="apple" /></a>
+          <a href="#"><img class="partner__img" src="/static/images/partner-2.png" alt="apple" /></a>
         </li>
         <li>
-          <a href="#"><img class="partner-img" src="/static/images/partner-3.png" alt="eltex" /></a>
+          <a href="#"><img class="partner__img" src="/static/images/partner-3.png" alt="eltex" /></a>
         </li>
         <li>
-          <a href="#"><img class="partner-img" src="/static/images/partner-4.png" alt="owox" /></a>
+          <a href="#"><img class="partner__img" src="/static/images/partner-4.png" alt="owox" /></a>
         </li>
       </ul>
     </section>
 
-    <div class="add-inf container">
+    <div class="add-information container">
       <article class="about-us">
-        <h2 class="add-title section-title">
+        <h2 class="add-information__title section-title">
           Design Life Kids
         </h2>
-        <div class="about-us-paragraph">
-          <h3>
+        <div class="about-us__paragraph">
+          <h3 class="about-us__title">
             About Us
           </h3>
-          <p class="about-us-text section-text">
+          <p class="about-us__text section-text">
             Some days i feel like i've been working on dlk my entire life and
             there are other days that i am completely shocked that four years
             have flown by. It's simply magical.
           </p>
-          @@include('button/index.html', {
+          @@include('link/index.html', {
           "href": "#",
           "text": "buy now"
           })
         </div>
       </article>
       <article class="contacts">
-        <h2 class="add-title section-title">
+        <h2 class="add-information__title section-title">
           Contacts
         </h2>
-        <p class="contacts-text section-text">
+        <p class="contacts__text section-text">
           Some days i feel like i've been working on dlk my entire life and
           there are other days that i am completely shocked that four years
           have flown by. It's simply magical.
@@ -162,11 +165,11 @@
   </main>
   @@include('footer/index.html')
   <div class="modal-window modal-window-close modal-window_js">
+    <button type="button" class="button-close button-close_js">X</button>
     @@include('form/index.html', {
-    "input-class": "form-input form-input_js",
+    "input-class": "registration__input form-input_js",
     "placeh": "",
-    "checked": "",
-    "disabled": "disabled"
+    "checked": ""
     })
   </div>
   <script src="index.js"></script>

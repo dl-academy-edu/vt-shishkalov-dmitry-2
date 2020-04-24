@@ -21,26 +21,24 @@
   <main>
     @@include('pagetitle/index.html', {
     "title": "contact us",
-    "tab": "passive-tab",
-    "page1": "contact us",
-    "secondpage": "",
-    "page2": ""
+    "page": "contact us"
     })
 
-    <div class="content container">
+    <div class="contents container">
       @@include('form/index.html', {
-      "input-class": "form-input",
+      "input-class": "registration__input",
       "placeh": "Ivan Ivanov",
       "checked": "checked",
-      "disabled": ""
+      "add-class": "button-invisible"
       })
 
       <article class="support">
-        <p class="text">Our support team are on-hand to assist with any issues you are experiencing.</p>
-        <p class="text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon
+        <p class="support__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+        <p class="support__text">Please use the form to contact us with your needs. Send us a message and we'll respond
+          as soon
           as
           possible.</p>
-        <p class="attention">An expert is waiting to help you!</p>
+        <p class="support__attention">An expert is waiting to help you!</p>
       </article>
     </div>
   </main>

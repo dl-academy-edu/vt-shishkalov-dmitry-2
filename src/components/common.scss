@@ -3,6 +3,8 @@ body {
   margin: 0;
 }
 
+$black: #000000;
+
 a { 
   text-decoration: none; 
 }
@@ -27,7 +29,7 @@ img {
   padding: 0 20px;
 }
 
-.list_none{
+.list-none{
   list-style-type: none;
   padding-left: 0;
   margin: 0;
@@ -45,9 +47,10 @@ img {
 }
 
 // Подключение компонентов
+@import "./link/link";
+@import "./button/button";
 @import "./header/header";
 @import "./footer/footer";
-@import "./button/button";
 @import "./category/category";
 @import "./pagetitle/pagetitle";
 @import "./form/form";

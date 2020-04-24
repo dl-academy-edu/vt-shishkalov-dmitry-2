@@ -1,67 +1,70 @@
 <footer>
-  <div class="container">
-    <ul class="footer-inf list_none">
-      <li class="footer-nav">
-        <p class="footer-title">Navigation</p>
-        <ul class="list_none">
-          <li><a class="footer-link" href="#">About Us</a></li>
-          <li><a class="footer-link" href="#">Blog</a></li>
-          <li><a class="footer-link" href="#">Design Services</a></li>
-          <li><a class="footer-link" href="#">Featured On</a></li>
-          <li><a class="footer-link" href="#">2018 Holiday Catalog</a></li>
-          <li><a class="footer-link" href="#">Shop By Designer</a></li>
+  <div class="content container">
+    <ul class="content__information list-none">
+      <li class="content__block content__block_left">
+        <p class="content__title">Navigation</p>
+        <ul class="list-none">
+          <li><a class="content__link" href="#">About Us</a></li>
+          <li><a class="content__link" href="#">Blog</a></li>
+          <li><a class="content__link" href="#">Design Services</a></li>
+          <li><a class="content__link" href="#">Featured On</a></li>
+          <li><a class="content__link" href="#">2018 Holiday Catalog</a></li>
+          <li><a class="content__link" href="#">Shop By Designer</a></li>
         </ul>
       </li>
-      <li class="footer-custom">
-        <p class="footer-title">Customer Information</p>
-        <ul class="list_none">
-          <li><a class="footer-link" href="#">Contact Us</a></li>
-          <li><a class="footer-link" href="#">Sale Exclusions</a></li>
-          <li><a class="footer-link" href="#">Shipping & Returns</a></li>
-          <li><a class="footer-link" href="#">Terms & Conditions</a></li>
-          <li><a class="footer-link" href="#">Privacy Policy</a></li>
-          <li><a class="footer-link" href="#">Search</a></li>
+      <li class="content__block content__block_centre">
+        <p class="content__title">Customer Information</p>
+        <ul class="list-none">
+          <li><a class="content__link" href="#">Contact Us</a></li>
+          <li><a class="content__link" href="#">Sale Exclusions</a></li>
+          <li><a class="content__link" href="#">Shipping & Returns</a></li>
+          <li><a class="content__link" href="#">Terms & Conditions</a></li>
+          <li><a class="content__link" href="#">Privacy Policy</a></li>
+          <li><a class="content__link" href="#">Search</a></li>
         </ul>
       </li>
-      <li class="footer-connect">
-        <p class="footer-title">Connect</p>
-        <form class="footer-form" name="text" method="POST" action="">
-          <input class="mail" type="email" placeholder="Email">
-          <button type="submit" class="button button_black"><span class="button-text">Join</span></button>
+      <li class="content__block content__block_right">
+        <p class="content__title">Connect</p>
+        <form class="content__form" name="text" method="POST" action="">
+          <input class="content__mail" type="email" placeholder="Email">
+          @@include('button/index.html', {
+          "type": "submit",
+          "text": "Join"
+          })
         </form>
-        <ul class="footer-soc list_none">
+        <ul class="content__soc list-none">
           <li>
-            <a class="social-link" href="#"><img src="/static/images/f.svg" alt="facebook" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/f.svg" alt="facebook" /></a>
           </li>
           <li>
-            <a class="social-link" href="#"><img src="/static/images/twit.svg" alt="twitter" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/twit.svg" alt="twitter" /></a>
           </li>
           <li>
-            <a class="social-link" href="#"><img src="/static/images/p.svg" alt="p" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/p.svg" alt="p" /></a>
           </li>
           <li>
-            <a class="social-link" href="#"><img src="/static/images/inst.svg" alt="instagram" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/inst.svg" alt="instagram" /></a>
           </li>
         </ul>
       </li>
     </ul>
 
-    <ul class="footer-last list_none">
-      <li class="footer-rating">
-        <p class="footer-link">Company Rating</p>
-        <ul class="stars list_none">
-          <li><img class="star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="star" src="/static/images/Star.svg" alt="star" /></li>
+    <ul class="add-inf list-none">
+      <li class="add-inf__rating">
+        <p class="add-inf__text">Company Rating</p>
+        <ul class="add-inf__stars list-none">
+          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
+          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
+          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
+          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
+          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
         </ul>
       </li>
       <li>
-        <p class="footer-link">Copyright © 2018 Dlk • Design Life Kids</p>
+        <p class="add-inf__text">Copyright © 2018 Dlk • Design Life Kids</p>
       </li>
       <li>
-        <a class="footer-text" href="#">Web Design — Direct Line Development</a>
+        <a class="add-inf__link" href="#">Web Design — Direct Line Development</a>
       </li>
     </ul>
   </div>

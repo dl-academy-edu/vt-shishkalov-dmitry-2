@@ -21,153 +21,159 @@
   <main>
     @@include('pagetitle/index.html', {
     "title": "toy for kids",
-    "tab": "active-tab",
-    "page1": "catalog",
-    "secondpage": "pasive-tab",
-    "page2": "toys"
+    "page": "toys"
     })
+    <!-- Переписать для этой страницы -->
 
-    <div class="buy-form">
-      <form action="https://form-data-dl.herokuapp.com/api/messages" class="buy container" method="GET">
-        <div class="cost-range">
-          <label class="label" for="cost">Cost</label>
+    <div class="buy">
+      <form action="https://form-data-dl.herokuapp.com/api/messages" class="buy__form container" method="GET">
+        <div class="buy__cost-range">
+          <label class="buy__form-label" for="cost">Cost</label>
           <input type="range" id="cost" name="cost" min="0" max="500" value="100">
-          <div class="range">
-            <span class="form-number">0</span>
-            <span class="form-number">500</span>
+          <div class="buy__range">
+            <span class="buy__form-number">0</span>
+            <span class="buy__form-number">500</span>
           </div>
         </div>
 
-        <fieldset class="buy-fieldset fieldset-color">
-          <legend class="label">Color</legend>
-          <label class="checkbox-label">
-            <input class="checkbox hidden" type="checkbox" name="color" value="black" checked>
-            <span class="indicator"></span>
+        <fieldset class="buy__fieldset buy__fieldset_color">
+          <legend class="buy__form-label">Color</legend>
+          <label class="buy__checkbox-label">
+            <input class="buy__checkbox hidden" type="checkbox" name="color" value="black" checked>
+            <span class="buy__indicator"></span>
             Black
           </label>
-          <label class="checkbox-label">
-            <input class="checkbox hidden" type="checkbox" name="color" value="blue">
-            <span class="indicator"></span>
+          <label class="buy__checkbox-label">
+            <input class="buy__checkbox hidden" type="checkbox" name="color" value="blue">
+            <span class="buy__indicator"></span>
             Blue
           </label>
-          <label class="checkbox-label">
-            <input class="checkbox hidden" type="checkbox" name="color" value="green">
-            <span class="indicator"></span>
+          <label class="buy__checkbox-label">
+            <input class="buy__checkbox hidden" type="checkbox" name="color" value="green">
+            <span class="buy__indicator"></span>
             Green
           </label>
-          <label class="checkbox-label">
-            <input class="checkbox hidden" type="checkbox" name="color" value="white">
-            <span class="indicator"></span>
+          <label class="buy__checkbox-label">
+            <input class="buy__checkbox hidden" type="checkbox" name="color" value="white">
+            <span class="buy__indicator"></span>
             White
           </label>
         </fieldset>
 
-        <fieldset class="buy-fieldset fieldset-shipping">
-          <legend class="label">Delivery</legend>
-          <label class="radio-label">
-            <input class="radio hidden" type="radio" name="delivery" value="free">
-            <span class="radio-indicator"></span>
+        <fieldset class="buy__fieldset buy__fieldset_shipping">
+          <legend class="buy__form-label">Delivery</legend>
+          <label class="buy__radio-label">
+            <input class="buy__radio hidden" type="radio" name="delivery" value="free">
+            <span class="buy__radio-indicator"></span>
             Free shipping
           </label>
-          <label class="radio-label">
-            <input class="radio hidden" type="radio" name="delivery" value="fast" checked>
-            <span class="radio-indicator"></span>
+          <label class="buy__radio-label">
+            <input class="buy__radio hidden" type="radio" name="delivery" value="fast" checked>
+            <span class="buy__radio-indicator"></span>
             Fast shipping
           </label>
         </fieldset>
 
-        <fieldset class="buy-fieldset">
-          <legend class="label">Amount</legend>
-          <div class="amount-d">
-            <label class="amount-label">
-              <span class="amount-value"> 0-5 </span>
-              <input class="amount hidden" type="radio" name="amount" value="small" checked>
-              <span class="amount-indicator"></span>
+        <fieldset class="buy__fieldset">
+          <legend class="buy__form-label">Amount</legend>
+          <div class="buy__amount-d">
+            <label class="buy__amount-label">
+              <span class="buy__amount-value buy__amount-value_small"> 0-5 </span>
+              <input class="buy__amount hidden" type="radio" name="amount" value="small" checked>
+              <span class="buy__amount-indicator"></span>
             </label>
-            <label class="amount-label">
-              <span class="amount-big-value"> 10-20 </span>
-              <input class="amount hidden" type="radio" name="amount" value="middle">
-              <span class="amount-indicator"></span>
+            <label class="buy__amount-label">
+              <span class="buy__amount-value"> 10-20 </span>
+              <input class="buy__amount hidden" type="radio" name="amount" value="middle">
+              <span class="buy__amount-indicator"></span>
             </label>
-            <label class="amount-label">
-              <span class="amount-big-value"> 20-50 </span>
-              <input class="amount hidden" type="radio" name="amount" value="large">
-              <span class="amount-indicator"></span>
+            <label class="buy__amount-label">
+              <span class="buy__amount-value"> 20-50 </span>
+              <input class="buy__amount hidden" type="radio" name="amount" value="large">
+              <span class="buy__amount-indicator"></span>
             </label>
           </div>
         </fieldset>
-        <button type="submit" class="button apply-button button_black"><span class="button-text">Apply</span></button>
+        @@include('button/index.html', {
+        "type": "submit",
+        "text": "Apply",
+        "add-class": "apply-button"
+        })
       </form>
     </div>
 
     <section class="container">
-      <ul class="products list_none">
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-1.jpg" alt="sharky">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+      <ul class="product list_none">
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-1.jpg" alt="sharky">
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">SHARKY BEAN BAG CHAIR COVER</span>
+            <span class="product__name">SHARKY BEAN BAG CHAIR COVER</span>
           </a>
-          <span class="product-price">$60.00 USD</span>
+          <span class="product__price">$60.00 USD</span>
         </li>
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-2.jpg" alt="brass">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-2.jpg" alt="brass">
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">BRASS DECO FRAMES</span>
+            <span class="product__name">BRASS DECO FRAMES</span>
           </a>
-          <span class="product-price">$66.00 USD</span>
+          <span class="product__price">$66.00 USD</span>
         </li>
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-3.jpg" alt="cibo">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-3.jpg" alt="cibo">
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">CIBO FULL APRON</span>
+            <span class="product__name">CIBO FULL APRON</span>
           </a>
-          <span class="product-price">$60.00 USD</span>
+          <span class="product__price">$60.00 USD</span>
         </li>
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-4.jpg"
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-4.jpg"
               alt="gumball machine">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">GATCHA GATCHA GUMBALL MACHINE</span>
+            <span class="product__name">GATCHA GATCHA GUMBALL MACHINE</span>
           </a>
-          <span class="product-price">$56.00 USD</span>
+          <span class="product__price">$56.00 USD</span>
         </li>
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-5.jpg" alt="candle">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-5.jpg" alt="candle">
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">CHRISTMAS ADVENT SCENTED CANDLE</span>
+            <span class="product__name">CHRISTMAS ADVENT SCENTED CANDLE</span>
           </a>
-          <span class="product-price">$29.00 USD</span>
+          <span class="product__price">$29.00 USD</span>
         </li>
-        <li class="one-product">
-          <a class="product-link" href="#"><img class="product-img" src="/static/images/toy-6.jpg" alt="tea light">
-            <div class="learn-more">
-              <span class="learn-more-text">LEARN MORE</span>
+        <li class="product__card">
+          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-6.jpg" alt="tea light">
+            <div class="product__learn-more">
+              <span class="product__learn-more-text">LEARN MORE</span>
             </div>
-            <span class="product-name">TANGLE SPINNING TEA LIGHT</span>
+            <span class="product__name">TANGLE SPINNING TEA LIGHT</span>
           </a>
-          <span class="product-price">$56.00 USD</span>
+          <span class="product__price">$56.00 USD</span>
         </li>
       </ul>
     </section>
-    <div class="pages container">
-      <a class="left" href="#"><img src="/static/images/page-left.png" alt=""></a>
-      <div class="numbers">
-        <a class="numder numder-one" href="#">1</a>
-        <a class="numder" href="#">2</a>
-        <a class="numder" href="#">3</a>
-        <a class="numder" href="#">4</a>
+    <div class="pagination container">
+      <a class="pagination__change pagination__change_back" href="#">
+        <img src="/static/images/page-left.png" alt="">
+      </a>
+      <div>
+        <a class="pagination__numder pagination__numder_one" href="#">1</a>
+        <a class="pagination__numder" href="#">2</a>
+        <a class="pagination__numder" href="#">3</a>
+        <a class="pagination__numder" href="#">4</a>
       </div>
-      <a class="right" href="#"><img src="/static/images/page-right.png" alt=""></a>
+      <a class="pagination__change pagination__change_forward" href="#">
+        <img src="/static/images/page-right.png" alt="">
+      </a>
     </div>
   </main>
   @@include('footer/index.html')
