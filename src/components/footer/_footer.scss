@@ -61,6 +61,7 @@ footer{
     display: inline-block;
     margin: 0;
     padding-bottom: 15px;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
     }
@@ -82,6 +83,7 @@ footer{
     height: 42px;
     background-color: #666666;
     border: 1px solid transparent;
+    transition: border .4s;
     padding-left: 15px;
     &::-webkit-input-placeholder{
       color: #EBEBEB;
@@ -108,6 +110,7 @@ footer{
     height: 30px;
     border-radius: 50%;
     cursor: default;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
       cursor: pointer;
@@ -165,6 +168,7 @@ footer{
     color: #A2A2A2;
     margin-top: 15px;
     margin-left: 109px;
+    transition: color .4s;
     &:hover{
       text-decoration-line: underline;
       color: #FFFFFF;

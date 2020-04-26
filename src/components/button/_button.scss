@@ -12,6 +12,7 @@
 
 .button_black{
     background-color: $black;
+    transition: background-color .4s;
     display: inline-block;
     text-align: center;
     border: none;

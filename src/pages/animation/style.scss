@@ -6,6 +6,83 @@ body
   overflow-x: hidden;
 }
 
+@keyframes taxi{
+  0%{
+    left: 100%;
+  }
+  44%{
+    left: 36%;
+    animation-delay: 1s;
+  }
+  100%{
+    left: -70%;
+  }
+}
+
+@keyframes message{
+  0%, 100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+
+@keyframes car-1{
+  0%{
+    left: -3%;
+    animation-timing-function: linear;
+  }
+  100%{
+    left: 100%;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes car-2{
+  0%{
+    left: 23%;
+    animation-timing-function: linear;
+  }
+  100%{
+    left: 100%;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes car-3{
+  0%{
+    left: 47%;
+    animation-timing-function: linear;
+  }
+  100%{
+    left: 100%;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes car-4{
+  0%{
+    left: 85%;
+    animation-timing-function: linear;
+  }
+  100%{
+    left: 100%;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes cars{
+  0%{
+    left: -20%;
+    animation-timing-function: linear;
+  }
+  100%{
+    left: 100%;
+    animation-timing-function: linear;
+  }
+}
+
 .animation{
   position: relative;
   width: 1400px;
@@ -21,17 +98,21 @@ body
     position: absolute;
     top: 56%;
     left: -3%;
+    animation: car-1 7s, cars 7s 7s infinite;
     &_two{
       top: 55%;
       left: 23%;
+      animation: car-2 8s, cars 14s 8s infinite;
     }
     &_three{
       top: 57%;
       left: 47%;
+      animation: car-3 3s, cars 5s 3s infinite;
     }
     &_four{
       top: 53%;
       left: 85%;
+      animation: car-4 3s, cars 10s 3s infinite;
     }
   }
 
@@ -50,12 +131,14 @@ body
 
   &__message{
     position: absolute;
-    // display: none;
     top: 45%;
     left: 11%;
+    opacity: 0;
+    animation: message 4s 1s;
     &_right{
       top: 36%;
       left: 23%;
+      animation: message 4s 5s;
     }
   }
 
@@ -78,13 +161,14 @@ body
   &__taxi{
     position: absolute;
     top: 52%;
-    left: 36%;
+    animation: taxi 20s 3s;
   }
 
   &__message-taxi{
     position: absolute;
-    // display: none;
+    opacity: 0;
     top: 44%;
     left: 56%;
+    animation: message 4s 10s;
   }
 }

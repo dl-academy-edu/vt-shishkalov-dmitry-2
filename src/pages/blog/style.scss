@@ -73,6 +73,7 @@
     text-transform: uppercase;
     color: #1E0606;
     margin-right: 64px;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
     }

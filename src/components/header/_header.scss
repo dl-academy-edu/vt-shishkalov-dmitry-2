@@ -7,6 +7,7 @@
     width: 100px;
     min-width: 100px;
     height: 52px;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
     }
@@ -35,6 +36,7 @@
     text-transform: uppercase;
     color: #1E0606;
     margin-right: 20px;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
     }
@@ -49,6 +51,7 @@
   }
 
   &__search{
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
       cursor: pointer;
