@@ -47,6 +47,8 @@ img {
 }
 
 // Подключение компонентов
+@import "./left/left";
+@import "./right/right";
 @import "./link/link";
 @import "./button/button";
 @import "./header/header";

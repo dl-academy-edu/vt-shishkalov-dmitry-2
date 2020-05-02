@@ -52,13 +52,18 @@
     <ul class="add-inf list-none">
       <li class="add-inf__rating">
         <p class="add-inf__text">Company Rating</p>
-        <ul class="add-inf__stars list-none">
-          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
-          <li><img class="add-inf__star" src="/static/images/Star.svg" alt="star" /></li>
-        </ul>
+        <input type="radio" id="star1" name="stars" class="add-inf__star-check">
+        <input type="radio" id="star2" name="stars" class="add-inf__star-check">
+        <input type="radio" id="star3" name="stars" class="add-inf__star-check">
+        <input type="radio" id="star4" name="stars" class="add-inf__star-check">
+        <input type="radio" id="star5" name="stars" class="add-inf__star-check">
+        <div class="add-inf__stars list-none">
+          <label for="star1" class="add-inf__star"></label>
+          <label for="star2" class="add-inf__star"></label>
+          <label for="star3" class="add-inf__star"></label>
+          <label for="star4" class="add-inf__star"></label>
+          <label for="star5" class="add-inf__star"></label>
+        </div>
       </li>
       <li>
         <p class="add-inf__text">Copyright © 2018 Dlk • Design Life Kids</p>

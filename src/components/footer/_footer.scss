@@ -142,14 +142,23 @@ footer{
   }
 
   &__stars{
+    width: 100px;
     display: flex;
+    justify-content: space-between;
     padding-left: 25px;
     flex-wrap: wrap;
+    padding-top: 18px;
+  }
+
+  &__star-check{
+    display: none;
   }
 
   &__star{
-    padding-top: 20px;
-    padding-left: 3px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background:url(static/images/stars.svg);
   }
 
   &__text{
@@ -180,4 +189,21 @@ footer{
       cursor: pointer;
     }
   }
+}
+
+#star1:hover ~ .add-inf__stars :nth-child(1),
+#star2:hover ~ .add-inf__stars :nth-child(-n+2),
+#star3:hover ~ .add-inf__stars :nth-child(-n+3),
+#star4:hover ~ .add-inf__stars :nth-child(-n+4),
+#star5:hover ~ .add-inf__stars :nth-child(-n+5){
+  cursor: pointer;
+  background:url(static/images/stars-color.svg);
+}
+
+#star1:checked ~ .add-inf__stars :nth-child(1),
+#star2:checked ~ .add-inf__stars :nth-child(-n+2),
+#star3:checked ~ .add-inf__stars :nth-child(-n+3),
+#star4:checked ~ .add-inf__stars :nth-child(-n+4),
+#star5:checked ~ .add-inf__stars :nth-child(-n+5){
+  background:url(static/images/stars-active.svg);
 }

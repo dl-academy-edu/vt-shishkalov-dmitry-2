@@ -90,7 +90,7 @@
 
     <div class="pagination container">
       <a class="pagination__change pagination__change_back" href="#">
-        <img src="/static/images/page-left.png" alt="">
+        @@include('left/index.html', {"color": "#e4e1e1"})
       </a>
       <div>
         <a class="pagination__numder pagination__numder_one" href="#">1</a>
@@ -99,7 +99,7 @@
         <a class="pagination__numder" href="#">4</a>
       </div>
       <a class="pagination__change pagination__change_forward" href="#">
-        <img src="/static/images/page-right.png" alt="">
+        @@include('right/index.html', {"color": "#e4e1e1"})
       </a>
     </div>
   </main>
