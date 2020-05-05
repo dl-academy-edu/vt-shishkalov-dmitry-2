@@ -159,6 +159,7 @@ footer{
     width: 13px;
     height: 13px;
     background:url(static/images/stars.svg);
+    transition: 0.5s;
   }
 
   &__text{
@@ -198,6 +199,7 @@ footer{
 #star5:hover ~ .add-inf__stars :nth-child(-n+5){
   cursor: pointer;
   background:url(static/images/stars-color.svg);
+  transition: 0.5s;
 }
 
 #star1:checked ~ .add-inf__stars :nth-child(1),

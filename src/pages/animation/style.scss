@@ -1,6 +1,7 @@
 
 body
 {
+  max-width: 1400px;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -83,15 +84,69 @@ body
   }
 }
 
+@keyframes hand{
+  0%{
+    top: 56%;
+    left: 22%;
+    transform: rotate(160deg);
+    animation-timing-function: linear;
+  }
+  32%{
+    top: 55%;
+    left: 28%;
+    animation-timing-function: linear;
+  }
+  100%{
+    top: 42%;
+    left: 24%;
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes hand-2{
+  0%{
+    top: 42%;
+    left: 24%;
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  68%{
+    top: 55%;
+    left: 28%;
+    animation-timing-function: linear;
+  }
+  100%{
+    top: 56%;
+    left: 22%;
+    transform: rotate(160deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes handw{
+  0%,100%{
+    top: 73%;
+    left: 19%;
+  }
+  50%{
+    top: 70%;
+    left: 19%;
+    transform: rotate(-45deg);
+  }
+}
+
 .animation{
   position: relative;
   width: 1400px;
+  max-width: 1400px;
   &__sky{
     width: 100%;
   }
 
   &__city{
     width: 100%;
+    height: 100%;
   }
 
   &__car{
@@ -136,7 +191,7 @@ body
     opacity: 0;
     animation: message 4s 1s;
     &_right{
-      top: 36%;
+      top: 31%;
       left: 23%;
       animation: message 4s 5s;
     }
@@ -147,9 +202,25 @@ body
     top: 58.5%;
     left: 17%;
     &_right{
-      top: 42%;
+      top: 47%;
       left: 24%;
     }
+  }
+
+  &__hand{
+    position: absolute;
+    top: 56%;
+    left: 22%;
+    transform: rotate(160deg);
+    animation: hand 3s 3s, hand-2 2s 13s;
+    animation-fill-mode: forwards;
+  }
+
+  &__hand-woman{
+    position: absolute;
+    top: 73%;
+    left: 19%;
+    animation: handw 7s;
   }
 
   &__suitcases{

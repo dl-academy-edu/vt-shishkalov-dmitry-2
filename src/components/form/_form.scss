@@ -36,6 +36,7 @@
     line-height: 21px;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border .5s;
     box-sizing: border-box;
     padding: 13px 19px;
     &:focus{
