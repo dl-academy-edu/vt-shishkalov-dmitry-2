@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="icon" type="image/png" href="/static/images/icon.png">
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/index.html",
+  "pages" : "/"
+  })
+  <main>
+    @@include('pagetitle/index.html', {
+    "title": "grid",
+    "page": "grid"
+    })
+
+    <div class="grid">
+      <div class="grid__box grid__box_1">
+        <div class="one">
+          <div class="one__text">
+            <span class="one__label">IPHONE 6S</span>
+            <span class="one__stats">3D Touch. 12MP photos. 4K video. One powerful phone</span>
+            <span class="one__more">Learn more or visit an Apple Store today</span>
+          </div>
+          <img class="one__image" src="/static/images/phone.jpg" alt="">
+        </div>
+      </div>
+      <div class="grid__box grid__box_2">
+        <div class="two">
+          <span class="two__more">LEARN MORE</span>
+          <span class="two__label">How to Use Rotary Evaporator in Chemical Labs</span>
+          <a href="#" class="two__link">Download now</a>
+        </div>
+      </div>
+      <div class="grid__box grid__box_3">
+        <div class="three">
+          <img class="three__image" src="/static/images/keyboard.svg" alt="">
+          <span class="three__label">Our Brand New Keyboard</span>
+          <a href="#" class="three__link">LEARN ›</a>
+        </div>
+      </div>
+      <div class="grid__box grid__box_4">
+        <div class="four">
+          <div class="four__text">
+            <span class="four__label">IMAC.RETINA</span>
+            <span class="four__pass">Hardly a month passes these days where</span>
+          </div>
+          <div class="four__description">
+            <span class="four__description-text">Apple may be experimenting in the virtual reality space. The company
+              has
+              been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the
+              display.</span>
+            <a href="#" class="four__link">DOWNLOAD NOW ›</a>
+          </div>
+          <div class="four__picture">
+            <img src="/static/images/mac.jpg" alt="" class="four__image">
+          </div>
+        </div>
+      </div>
+      <div class="grid__box grid__box_5">
+        <div class="five">
+          <div class="five__wrapper">
+            <button class="purple-button"><span class="button-textp">POPULAR</span></button>
+            <img src="/static/images/disk.svg" alt="" class="five__image">
+            <span class="five__meet">meet</span>
+          </div>
+          <span class="five__label">iCloud</span>
+          <span class="five__text">With iCloud, you always have the latest versions of your most important things — like
+            documents, apps, notes, and contacts — on whatever device you’re using.</span>
+          <button class="yellow-button"> <span class="button-texty">LEARN MORE</span></button>
+        </div>
+      </div>
+      <div class="grid__box grid__box_6">
+        <div class="six">
+          <span class="six__label">Much MuchBetter Experience</span>
+          <picture>
+            <source srcset="/static/images/tablet-tablet.png" media="(max-width: 768px)">
+            <source srcset="/static/images/tablet.png">
+            <img class="six__image" src="/static/images/tablet.png" alt="" />
+          </picture>
+        </div>
+      </div>
+      <div class="grid__box grid__box_7">
+        <div class="seven">
+          <img class="seven__image" src="/static/images/device.png" alt="">
+          <span class="seven__label">Games ourpasion</span>
+          <a href="#" class="seven__link">LEARN ›</a>
+        </div>
+      </div>
+      <div class="grid__box grid__box_8">
+        <div class="eight">
+          <img class="eight__image" src="/static/images/ins.svg" alt="">
+          <a href="#" class="eight__link">Follow me ›</a>
+        </div>
+      </div>
+      <div class="grid__box grid__box_9">
+        <div class="nine">
+          <img src="/static/images/tv.png" alt="" class="nine__image">
+          <span class="nine__text">More than just a display, it’s a vision</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('footer/index.html')
+  <script src="index.js"></script>
+</body>
+
+</html>

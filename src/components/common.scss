@@ -27,6 +27,10 @@ img {
   width: 100%;
   max-width: 1220px;
   padding: 0 20px;
+  @media (max-width: 768px) {
+    max-width: 688px;
+    padding: 0 20px;
+  }
 }
 
 .list-none{
@@ -56,3 +60,4 @@ img {
 @import "./category/category";
 @import "./pagetitle/pagetitle";
 @import "./form/form";
+@import "./net.scss"

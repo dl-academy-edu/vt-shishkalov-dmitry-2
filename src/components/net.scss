@@ -1,0 +1,70 @@
+$columns: 12;
+$gap: 20px;
+
+$size-xl: 1220px;
+$size-l: 1000px;
+$size-m: 768px;
+$size-s: 530px;
+
+@mixin media-interval($min, $max) {
+  @if ($max == 0) {
+    $max: 9999px;
+  }
+  @media (min-width: ($min+1px) and (max-width: $max)) {
+    @content;
+  }
+}
+
+@mixin create-net($type) {
+  @for $i from 1 to $columns {
+    .col-#{$type}-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+    .add-#{$type}-#{$i} {
+      margin-right: (100% / $columns) * $i;
+    }
+    .skip-#{$type}-#{$i} {
+      margin-left: (100% / $columns) * $i;
+    }
+  }
+}
+
+@include media-interval($size-xl, 0) {
+  @include create-net(x1);
+}
+@include media-interval($size-l, $size-xl) {
+  @include create-net(l);
+}
+@include media-interval($size-m, $size-l) {
+  @include create-net(m);
+}
+@include media-interval($size-s, $size-m) {
+  @include create-net(s);
+}
+@include media-interval(0, $size-s) {
+  @include create-net(xs);
+}
+
+.net-container{
+  margin-top: -$gap;
+  margin-left: -$gap/2;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gap/2);
+  padding-right: $gap/2;
+  padding-left: $gap/2;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+div[class*="col"]{
+  padding-top: $gap;
+  padding-left: $gap/2;
+  padding-right: $gap/2;
+}

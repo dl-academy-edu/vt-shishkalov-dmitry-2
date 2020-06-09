@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Toys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DLK Toys</title>
   <link
     href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
     rel="stylesheet">
@@ -11,19 +12,19 @@
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/static/fonts/oswald.css" />
-  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/static/images/icon.png">
 </head>
 
 <body>
   @@include('header/index.html', {
-  "link" : "/index.html"
+  "link" : "/index.html",
+  "pages" : "/"
   })
   <main>
     @@include('pagetitle/index.html', {
     "title": "toy for kids",
     "page": "toys"
     })
-    <!-- Переписать для этой страницы -->
 
     <div class="buy">
       <form action="https://form-data-dl.herokuapp.com/api/messages" class="buy__form container" method="GET">
@@ -105,7 +106,13 @@
     <section class="container">
       <ul class="product list_none">
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-1.jpg" alt="sharky">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-1-tablet.jpg, /static/images/toy-1-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-1.jpg, /static/images/toy-1@2.jpg 2x">
+              <img src="/static/images/toy-1.jpg" alt="sharky" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -114,7 +121,13 @@
           <span class="product__price">$60.00 USD</span>
         </li>
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-2.jpg" alt="brass">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-2-tablet.jpg, /static/images/toy-2-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-2.jpg, /static/images/toy-2@2.jpg 2x">
+              <img src="/static/images/toy-2.jpg" alt="brass" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -123,7 +136,13 @@
           <span class="product__price">$66.00 USD</span>
         </li>
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-3.jpg" alt="cibo">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-3-tablet.jpg, /static/images/toy-3-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-3.jpg, /static/images/toy-3@2.jpg 2x">
+              <img src="/static/images/toy-3.jpg" alt="cibo" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -132,8 +151,13 @@
           <span class="product__price">$60.00 USD</span>
         </li>
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-4.jpg"
-              alt="gumball machine">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-4-tablet.jpg, /static/images/toy-4-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-4.jpg, /static/images/toy-4@2.jpg 2x">
+              <img src="/static/images/toy-4.jpg" alt="gumball machine" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -142,7 +166,13 @@
           <span class="product__price">$56.00 USD</span>
         </li>
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-5.jpg" alt="candle">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-5-tablet.jpg, /static/images/toy-5-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-5.jpg, /static/images/toy-5@2.jpg 2x">
+              <img src="/static/images/toy-5.jpg" alt="candle" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -151,7 +181,13 @@
           <span class="product__price">$29.00 USD</span>
         </li>
         <li class="product__card">
-          <a class="product__link" href="#"><img class="product__img" src="/static/images/toy-6.jpg" alt="tea light">
+          <a class="product__link" href="#">
+            <picture class="product__img">
+              <source srcset="/static/images/toy-6-tablet.jpg, /static/images/toy-6-tablet@2.jpg 2x"
+                media="(max-width: 768px)">
+              <source srcset="/static/images/toy-6.jpg, /static/images/toy-6@2.jpg 2x">
+              <img src="/static/images/toy-6.jpg" alt="tea light" />
+            </picture>
             <div class="product__learn-more">
               <span class="product__learn-more-text">LEARN MORE</span>
             </div>
@@ -165,11 +201,11 @@
       <a class="pagination__change pagination__change_back" href="#">
         @@include('left/index.html', {"color": "#e4e1e1"})
       </a>
-      <div>
-        <a class="pagination__numder pagination__numder_one" href="#">1</a>
-        <a class="pagination__numder" href="#">2</a>
-        <a class="pagination__numder" href="#">3</a>
-        <a class="pagination__numder" href="#">4</a>
+      <div class="pagination__numbers">
+        <a class="pagination__number pagination__number_one" href="#">1</a>
+        <a class="pagination__number" href="#">2</a>
+        <a class="pagination__number" href="#">3</a>
+        <a class="pagination__number" href="#">4</a>
       </div>
       <a class="pagination__change pagination__change_forward" href="#">
         @@include('right/index.html', {"color": "#e4e1e1"})

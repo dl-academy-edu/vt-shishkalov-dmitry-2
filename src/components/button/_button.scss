@@ -37,7 +37,14 @@
 }
 
 .apply-button{
-    margin-left: 60px;
+    margin-left: 5.1%;
     margin-top: 37px;
     height: 40px;
+    @media (max-width: 818px) {
+        margin-left: 27%;
+    }
+    @media (max-width: 530px) {
+        margin-top: 25px;
+        margin-left: 40%;
+    }
 }
