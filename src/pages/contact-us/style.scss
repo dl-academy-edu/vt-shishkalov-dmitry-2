@@ -7,6 +7,51 @@
   }
 }
 
+.registration{
+  width: 57.6%;
+  @media (max-width: 1000px) {
+    width: 680px;
+  }
+  @media (max-width: 768px) {
+    width: 648px;
+  }
+  @media (max-width: 700px) {
+    width: 600px;
+  }
+  @media (max-width: 640px) {
+    width: 335px;
+  }
+
+  &__large-row{
+    width: 100%;
+    @media (max-width: 1000px) {
+      width: 600px;
+    }
+    @media (max-width: 768px) {
+      width: 536px;
+    }
+    @media (max-width: 640px) {
+      width: 285px;
+    }
+  }
+
+  &__little-row{
+    width: 48.3%;
+    @media (max-width: 1000px) {
+      width: 290px;
+    }
+    @media (max-width: 768px) {
+      width: 258px;
+    }
+    @media (max-width: 640px) {
+      width: 285px;
+      &_second{
+        margin-top: 37px;
+      }
+    }
+  }
+}
+
 .support{
   margin-top: -3px;
   margin-left: 10.1%;

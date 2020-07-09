@@ -40,9 +40,9 @@
           <span class="poster__design">
             Designed in Slovenia
           </span>
-          @@include('link/index.html', {
-          "class": "button_js poster__button",
-          "href": "#",
+          @@include('button/index.html', {
+          "add-class": "button_js poster__button",
+          "type": "button",
           "text": "EXPLORE NOW"
           })
         </div>
@@ -191,8 +191,9 @@
       })
     </div>
   </div>
+  <audio loop autoplay>
+    <source src="/static/images/song.mp3"></audio>
   <script src="index.js"></script>
-  <audio loop autoplay src="/static/images/song.mp3"></audio>
 </body>
 
 </html>

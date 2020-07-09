@@ -25,7 +25,7 @@
       </li>
       <li class="content__block content__block_right">
         <p class="content__title">Connect</p>
-        <form class="content__form" name="text" method="POST" action="">
+        <form class="content__form" name="text" method="POST" action="https://form-data-dl.herokuapp.com/api/messages">
           <input class="content__mail" type="email" placeholder="Email">
           @@include('button/index.html', {
           "type": "submit",
@@ -34,16 +34,20 @@
         </form>
         <ul class="content__soc list-none">
           <li>
-            <a class="content__soc-link" href="#"><img src="/static/images/f.svg" alt="facebook" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/f.svg" alt="facebook"
+                style="width:9px;height:16px;" /></a>
           </li>
           <li>
-            <a class="content__soc-link" href="#"><img src="/static/images/twit.svg" alt="twitter" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/twit.svg" alt="twitter"
+                style="width:15px;height:13px;" /></a>
           </li>
           <li>
-            <a class="content__soc-link" href="#"><img src="/static/images/p.svg" alt="p" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/p.svg" alt="p"
+                style="width:16px;height:16px;" /></a>
           </li>
           <li>
-            <a class="content__soc-link" href="#"><img src="/static/images/inst.svg" alt="instagram" /></a>
+            <a class="content__soc-link" href="#"><img src="/static/images/inst.svg" alt="instagram"
+                style="width:16px;height:16px;" /></a>
           </li>
         </ul>
       </li>

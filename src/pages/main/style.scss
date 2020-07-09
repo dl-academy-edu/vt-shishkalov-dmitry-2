@@ -60,7 +60,7 @@
   }
 
   &__button{
-    width: 161px;
+    width: 173px;
   }
 
   &__img{
@@ -264,6 +264,7 @@
   &__img{
     width: 100%;
     height: 100%;
+    max-width: 480px;
     min-width: 300px;
     @media (max-width: 768px) {
       min-width: 200px;
@@ -274,10 +275,12 @@
 
   &__information{
     position: relative;
+    width: 45.8%;
     margin-top: 30px;
     margin-left: 5.1%;
     padding-left: 5.1%;
     @media (max-width: 768px) {
+      width: 100%;
       margin-left: 36px;
       padding-left: 20px;
     }
@@ -325,11 +328,13 @@
   }
 
   &__text{
-    width: 82.8%;
+    min-width: 300px;
+    width: 100%;
     margin: 0;
     padding-bottom: 15px;
     @media (max-width: 768px) {
       width: 100%;
+      min-width: 220px;
       padding-bottom: 12px;
     } 
   }

@@ -121,9 +121,7 @@
 
 .animation{
   position: relative;
-  max-width: 1585px;
   width: 100vw;
-  max-height: 768px;
   overflow-x: hidden;
   margin-bottom: 70px;
   @media (max-width: 768px) {
@@ -131,15 +129,11 @@
   }
 
   &__sky{
-    max-width: 1585px;
-    max-height: 134px;
     width: 100vw;
     height: 8.26vw;
   }
 
   &__city{
-    max-width: 1585px;
-    max-height: 768px;
     width: 100vw;
     height: 38.5vw;
   }
