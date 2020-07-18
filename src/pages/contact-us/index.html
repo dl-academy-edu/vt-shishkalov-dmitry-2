@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact with DLK</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="icon" type="image/png" href="/static/images/icon.png">
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/index.html",
+  "pages" : "/"
+  })
+  <main>
+    @@include('pagetitle/index.html', {
+    "title": "contact us",
+    "page": "contact us"
+    })
+
+    <div class="contents container">
+      @@include('form/index.html', {
+      "input-class": "registration__input",
+      "placeh": "Ivan Ivanov",
+      "checked": "checked",
+      "add-class": "button-invisible"
+      })
+
+      <article class="support">
+        <p class="support__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+        <p class="support__text">Please use the form to contact us with your needs. Send us a message and we'll respond
+          as soon
+          as
+          possible.</p>
+        <p class="support__attention">An expert is waiting to help you!</p>
+      </article>
+    </div>
+  </main>
+  @@include('footer/index.html')
+  <script src="index.js"></script>
+</body>
+
+</html>

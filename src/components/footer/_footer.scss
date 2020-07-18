@@ -3,6 +3,12 @@ footer{
   display: flex;
   flex-direction: column;
   padding-bottom: 85px;
+  @media (max-width: 1000px) {
+    padding-bottom: 65px;
+  }
+  @media (max-width: 655px) {
+    padding-bottom: 55px;
+  }
   &::before{
     content: ' ';
     position: absolute;
@@ -20,6 +26,12 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 100px;
+    @media (max-width: 1000px) {
+      margin-top: 80px;
+    }
+    @media (max-width: 665px) {
+      margin-top: 45px;
+    }
   }
 
   &__title{
@@ -28,29 +40,58 @@ footer{
     color: #AAAAAA;
     margin: 0;
     padding-bottom: 52px;
+    @media (max-width: 665px) {
+      padding-bottom: 41px;
+      padding-top: 25px;
+    }
   }
 
   &__block{
+    width: 32.2%;
     &::after{
       content: ' ';
       position: absolute;
-      width: 380px;
+      width: 32.2%;
       height: 1px;
       left: 0;
       top: 45px;
-      background-color: #666666;
+      background-color: #666666; 
+      @media (max-width: 665px) {
+        width: 100%;
+        top: 65px;
+      }
+    }
+    @media (max-width: 665px) {
+      width: 100%;
     }
 
     &_centre{
       &::after{
-        left: 400px;
+        left: 33.9%;
+        @media (max-width: 665px) {
+          left: 0;
+          top: 262px;
+        }
       }
     }
 
     &_right{
       &::after{
-        left: 800px;
+        left: 67.8%;
+        @media (max-width: 665px) {
+          left: 0;
+          top: 457px;
+        }
       }
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (max-width: 665px) {
+      max-height: 110px;
     }
   }
 
@@ -61,6 +102,7 @@ footer{
     display: inline-block;
     margin: 0;
     padding-bottom: 15px;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
     }
@@ -70,6 +112,7 @@ footer{
   }
 
   &__form{
+    width: 100%;
     display: flex;
     margin-top: -3px;
   }
@@ -78,10 +121,11 @@ footer{
     font-size: 16px;
     line-height: 22px;
     color: #EBEBEB;
-    width: 286px;
+    width: 88%;
     height: 42px;
     background-color: #666666;
     border: 1px solid transparent;
+    transition: border .4s;
     padding-left: 15px;
     &::-webkit-input-placeholder{
       color: #EBEBEB;
@@ -91,7 +135,7 @@ footer{
     }
     &:focus{
       border: 1px solid #FFFDFD;
-    }
+    } 
   }
 
   &__soc{
@@ -102,12 +146,14 @@ footer{
   &__soc-link{
     margin-right: 10px;
     display: inline-flex;
+    align-items: center;
     justify-content: center;
     background: #666666;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     cursor: default;
+    transition: opacity .4s;
     &:hover{
       opacity: .5;
       cursor: pointer;
@@ -116,6 +162,11 @@ footer{
       opacity: .2;
       cursor: pointer;
     }
+    @media (max-width: 665px) {
+      width: 28px;
+      height: 28px;
+      margin-right: 15px;
+    }
   }
 }
 
@@ -123,30 +174,63 @@ footer{
   position: relative;
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 665px) {
+    margin-top: 60px;
+  }
   &::after{
     content: ' ';
     position: absolute;
-    width: 1180px;
+    // width: 1180px;
+    width: 100%;
     height: 1px;
     left: 0;
     top: -23px;
     background-color: #666666;
   }
 
-  &__rating{
+  &__block{
     display: flex;
-    margin-right: 165px;
+    width: 33.3%;
+    &_mobile-1{
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+    &_mobile-2{
+      @media (max-width: 1000px) {
+        width: 50%;
+      }
+      @media (max-width: 665px) {
+        width: 100%;
+      }
+    }
   }
 
   &__stars{
+    width: 30%;
     display: flex;
+    justify-content: space-between;
     padding-left: 25px;
-    flex-wrap: wrap;
+    padding-top: 18px;
+    @media (max-width: 1000px) {
+      width: 17%;
+    }
+    @media (max-width: 665px) {
+      width: 30%;
+    }
+  }
+
+  &__star-check{
+    display: none;
   }
 
   &__star{
-    padding-top: 20px;
-    padding-left: 3px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background:url(static/images/stars.svg);
+    transition: .3s;
   }
 
   &__text{
@@ -160,11 +244,12 @@ footer{
 
   &__link{
     display: block;
+    width: 100%;
     font-size: 16px;
     line-height: 22px;
     color: #A2A2A2;
     margin-top: 15px;
-    margin-left: 109px;
+    transition: color .4s;
     &:hover{
       text-decoration-line: underline;
       color: #FFFFFF;
@@ -176,4 +261,22 @@ footer{
       cursor: pointer;
     }
   }
+}
+
+#star1:hover ~ .add-inf__stars :nth-child(1),
+#star2:hover ~ .add-inf__stars :nth-child(-n+2),
+#star3:hover ~ .add-inf__stars :nth-child(-n+3),
+#star4:hover ~ .add-inf__stars :nth-child(-n+4),
+#star5:hover ~ .add-inf__stars :nth-child(-n+5){
+  cursor: pointer;
+  background:url(static/images/stars-color.svg);
+  transition: .3s;
+}
+
+#star1:checked ~ .add-inf__stars :nth-child(1),
+#star2:checked ~ .add-inf__stars :nth-child(-n+2),
+#star3:checked ~ .add-inf__stars :nth-child(-n+3),
+#star4:checked ~ .add-inf__stars :nth-child(-n+4),
+#star5:checked ~ .add-inf__stars :nth-child(-n+5){
+  background:url(static/images/stars-active.svg);
 }

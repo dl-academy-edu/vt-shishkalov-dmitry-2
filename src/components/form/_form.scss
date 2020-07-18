@@ -2,6 +2,18 @@
   background-color: #E5EAF8;
   width: 680px;
   padding: 23px 40px 42px 40px;
+  @media (max-width: 768px) {
+    width: 648px;
+    padding: 23px 56px 42px 56px;
+  }
+  @media (max-width: 700px) {
+    width: 600px;
+    padding: 23px 32px 42px 32px;
+  }
+  @media (max-width: 640px) {
+    width: 335px;
+    padding: 8px 25px 25px 25px;
+  }
 
   &__label{
     font-family: Roboto;
@@ -12,18 +24,42 @@
     color: #1E0606;
     position: absolute;
     top: 20px;
+    &_little{
+      top: -23px;
+      @media (max-width: 640px) {
+        top: -18px;
+      }
+    }
   }
 
   &__large-row{
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 600px;
     padding-top: 43px;
+    @media (max-width: 768px) {
+      width: 536px;
+    }
+    @media (max-width: 640px) {
+      width: 285px;
+      padding-top: 37px;
+    }
   }
 
   &__little-row{
+    position: relative;
     width: 290px;
+    @media (max-width: 768px) {
+      width: 258px;
+    }
+    @media (max-width: 640px) {
+      width: 285px;
+      &_second{
+        margin-top: 37px;
+      }
+    }
   }
 
 
@@ -36,10 +72,20 @@
     line-height: 21px;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border .5s;
     box-sizing: border-box;
     padding: 13px 19px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 12px 15px;
+    }
     &:focus{
-      border: 2px solid rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 0, 0, 0.3);
     }
   }
 

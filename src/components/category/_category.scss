@@ -2,19 +2,26 @@
 .category{
   &__card{
     display: flex;
-    width: 280px;
+    max-width: 280px;
+    min-width: 280px;
     height: 270px;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
+    margin-right: 20px;
+    &:nth-child(4){
+      margin-right: 0px;
+    }
+    @media (max-width: 768px) {
+      width: 258px;
+      height: 249px;
+    }
   }
 
   &__link{
     width: 100%;
     height: 100%;
-    padding-right: 44px;
-    padding-left: 44px;
     display: flex;
     justify-content: center;
     align-items: center;

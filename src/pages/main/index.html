@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="We sell the best clothes in Slovenia. Our quality is known all over the world!">
+  <title>DLK - the best clothing shop</title>
   <link
     href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
     rel="stylesheet">
@@ -11,12 +13,13 @@
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/static/fonts/oswald.css" />
-  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/static/images/icon.png">
 </head>
 
 <body>
   @@include('header/index.html', {
-  "link" : "#"
+  "link" : "#",
+  "pages" : "../"
   })
   <main>
     <section class="poster container">
@@ -29,20 +32,25 @@
           <button class="slider__button"></button>
         </div>
       </div>
-      <div class="poster__text">
-        <h2 class="poster__title">
-          THE OOH NOO COLLECTION
-        </h2>
-        <span class="poster__design">
-          Designed in Slovenia
-        </span>
-        @@include('link/index.html', {
-        "class": "button_js",
-        "href": "#",
-        "text": "EXPLORE NOW"
-        })
+      <div class="poster__content">
+        <div class="poster__text">
+          <h2 class="poster__title">
+            THE OOH NOO COLLECTION
+          </h2>
+          <span class="poster__design">
+            Designed in Slovenia
+          </span>
+          @@include('button/index.html', {
+          "add-class": "button_js poster__button",
+          "type": "button",
+          "text": "EXPLORE NOW"
+          })
+        </div>
+        <picture class="poster__img">
+          <source srcset="/static/images/monster.png, /static/images/monster@2.png 2x">
+          <img src="/static/images/monster.png" alt="monster" />
+        </picture>
       </div>
-      <img class="poster__img" src="/static/images/monster.png" alt="monster" />
       <div class="poster__footer">
         <span class="poster__footer-text">Free (continental) USA shipping on all orders of $100 USD or more!</span>
       </div>
@@ -75,8 +83,8 @@
         })
       </ul>
       <div class="category__footer">
-        <button class="category__button"><img src="/static/images/button-left.png" alt="left"></button>
-        <button class="category__button"><img src="/static/images/button-right.png" alt="right"></button>
+        <button class="category__button">@@include('left/index.html', {"color": "#1E0606"})</button>
+        <button class="category__button">@@include('right/index.html', {"color": "#1E0606"})</button>
         <p class="category__text section-text">
           Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture
           for kids and adults.
@@ -85,7 +93,14 @@
     </section>
 
     <section class="delivery container">
-      <img class="delivery__img" src="/static/images/delivery.jpg" alt="delivery" />
+      <picture class="delivery__img">
+        <source srcset="/static/images/delivery-mobile.jpg, /static/images/delivery-mobile@2.jpg 2x"
+          media="(max-width: 530px)">
+        <source srcset="/static/images/delivery-tablet.jpg, /static/images/delivery-tablet@2.jpg 2x"
+          media="(max-width: 768px)">
+        <source srcset="/static/images/delivery.jpg, /static/images/delivery@2.jpg 2x">
+        <img src="/static/images/delivery.jpg" alt="delivery" />
+      </picture>
       <div class="delivery__information">
         <h2 class="section-title">
           Delivery
@@ -116,17 +131,17 @@
     <section class="partners container">
       <h2 class="hidden">Partners</h2>
       <ul class="partners__list list-none">
-        <li>
-          <a href="#"><img class="partner__img" src="/static/images/partner-1.png" alt="mail" /></a>
+        <li class="partners__one">
+          <a href="#"><img class="partners__img" src="/static/images/partner-1.png" alt="mail" /></a>
         </li>
-        <li>
-          <a href="#"><img class="partner__img" src="/static/images/partner-2.png" alt="apple" /></a>
+        <li class="partners__one">
+          <a href="#"><img class="partners__img" src="/static/images/partner-2.png" alt="apple" /></a>
         </li>
-        <li>
-          <a href="#"><img class="partner__img" src="/static/images/partner-3.png" alt="eltex" /></a>
+        <li class="partners__one">
+          <a href="#"><img class="partners__img" src="/static/images/partner-3.png" alt="eltex" /></a>
         </li>
-        <li>
-          <a href="#"><img class="partner__img" src="/static/images/partner-4.png" alt="owox" /></a>
+        <li class="partners__one">
+          <a href="#"><img class="partners__img" src="/static/images/partner-4.png" alt="owox" /></a>
         </li>
       </ul>
     </section>
@@ -160,18 +175,24 @@
           there are other days that i am completely shocked that four years
           have flown by. It's simply magical.
         </p>
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6362549017213!2d-122.41734020667872!3d37.77512638187913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809d08b6920d%3A0xfbbfc5009fcd9583!2zMTIzIDEwdGggU3QsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAzLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1589723771267!5m2!1sru!2sru"></iframe>
       </article>
     </div>
   </main>
   @@include('footer/index.html')
   <div class="modal-window modal-window-close modal-window_js">
-    <button type="button" class="button-close button-close_js">X</button>
-    @@include('form/index.html', {
-    "input-class": "registration__input form-input_js",
-    "placeh": "",
-    "checked": ""
-    })
+    <div class="for-close">
+      <button type="button" class="button-close button-close_js">X</button>
+      @@include('form/index.html', {
+      "input-class": "registration__input form-input_js",
+      "placeh": "",
+      "checked": ""
+      })
+    </div>
   </div>
+  <audio loop autoplay>
+    <source src="/static/images/song.mp3"></audio>
   <script src="index.js"></script>
 </body>
 

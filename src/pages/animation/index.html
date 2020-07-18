@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animation scene</title>
   <link
     href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,400,700%7COpen+Sans:400,700%7CRoboto&display=swap"
     rel="stylesheet">
@@ -11,28 +12,42 @@
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/static/fonts/oswald.css" />
-  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/static/images/icon.png">
 </head>
 
 <body>
-  <div class="amimation">
-    <img class="animation__sky" src="/static/images/sky.png" alt="sky">
-    <img class="animation__city" src="/static/images/city.png" alt="city">
-    <img class="animation__car" src="/static/images/car-one.png" alt="car-one">
-    <img class="animation__car animation__car_two" src="/static/images/car-two.png" alt="car-two">
-    <img class="animation__car animation__car_three" src="/static/images/car-three.png" alt="car-three">
-    <img class="animation__car animation__car_four" src="/static/images/car-four.png" alt="car-four">
-    <img class="animation__lantern" src="/static/images/lantern-one.png" alt="lantern-one">
-    <img class="animation__lantern animation__lantern_right" src="/static/images/lantern-one.png" alt="lantern-one">
-    <img class="animation__taxi" src="/static/images/taxi.png" alt="taxi">
-    <img class="animation__message-taxi" src="/static/images/message-taxi.png" alt="message-taxi">
-    <img class="animation__lantern animation__lantern_centre" src="/static/images/lantern-two.png" alt="lantern-two">
-    <img class="animation__message" src="/static/images/message-1.png" alt="message-one">
-    <img class="animation__message animation__message_right" src="/static/images/message-2.png" alt="message-two">
-    <img class="animation__man" src="/static/images/man-1.png" alt="man-one">
-    <img class="animation__man animation__man_right" src="/static/images/man-2.png" alt="man-two">
-    <img class="animation__suitcases" src="/static/images/suitcases.png" alt="suitcases">
-  </div>
+  @@include('header/index.html', {
+  "link" : "/index.html",
+  "pages" : "/"
+  })
+  <main>
+    @@include('pagetitle/index.html', {
+    "title": "animation scene",
+    "page": "animation"
+    })
+    <section class="animation">
+      <img class="animation__sky" src="/static/images/sky.png" alt="sky">
+      <img class="animation__city" src="/static/images/city.png" alt="city">
+      <img class="animation__car animation__car_three" src="/static/images/car-three.png" alt="car-three">
+      <img class="animation__car animation__car_two" src="/static/images/car-two.png" alt="car-two">
+      <img class="animation__car" src="/static/images/car-one.png" alt="car-one">
+      <img class="animation__car animation__car_four" src="/static/images/car-four.png" alt="car-four">
+      <img class="animation__lantern" src="/static/images/lantern-one.png" alt="lantern-one">
+      <img class="animation__lantern animation__lantern_right" src="/static/images/lantern-one.png" alt="lantern-one">
+      <img class="animation__taxi" src="/static/images/taxi.png" alt="taxi">
+      <img class="animation__message-taxi" src="/static/images/message-taxi.png" alt="message-taxi">
+      <img class="animation__lantern animation__lantern_centre" src="/static/images/lantern-two.png" alt="lantern-two">
+      <img class="animation__man" src="/static/images/man-1.png" alt="man-one">
+      <img class="animation__hand-woman" src="/static/images/hand-woman.png" alt="hand">
+      <img class="animation__hand" src="/static/images/hand.png" alt="hand">
+      <img class="animation__man animation__man_right" src="/static/images/man-2.png" alt="man-two">
+      <img class="animation__message" src="/static/images/message-1.png" alt="message-one">
+      <img class="animation__message animation__message_right" src="/static/images/message-2.png" alt="message-two">
+      <img class="animation__suitcases" src="/static/images/suitcases.png" alt="suitcases">
+    </section>
+  </main>
+  @@include('footer/index.html')
+  <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,68 @@
+
+@keyframes line-left{
+  0%{
+    transform: translateX(-50%);
+    animation-timing-function: linear;
+  }
+  100%{
+    transform: translateX(0%);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes line-right{
+  0%{
+    transform: translateX(50%);
+    animation-timing-function: linear;
+  }
+  100%{
+    transform: translateX(0%);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes sun{
+  0%{
+    transform: translate(0, 0);
+    animation-timing-function: linear;
+  }
+  100%{
+    transform: translate(20%, 8%);
+    fill: red;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes sky{
+  0%{
+    fill:#5D9CEC;
+  }
+  100%{
+    fill: #191970;
+  }
+}
+
+.svg{
+  margin-bottom: 60px;
+  @media (max-width: 440px) {
+    width: 100%;
+  }
+
+  &__line-left{
+    animation: line-left 5s;
+  }
+
+  &__line-right{
+    animation: line-right 5s;
+  }
+
+  &__sun{
+    animation: sun 5s ;
+    animation-fill-mode: forwards;
+  }
+
+  &__sky{
+    animation: sky 15s ;
+    animation-fill-mode: forwards;
+  }
+}

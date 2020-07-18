@@ -12,8 +12,8 @@
 
 .button_black{
     background-color: $black;
+    transition: background-color .4s;
     display: inline-block;
-    text-align: center;
     border: none;
 }
 
@@ -36,7 +36,14 @@
 }
 
 .apply-button{
-    margin-left: 60px;
+    margin-left: 5.1%;
     margin-top: 37px;
     height: 40px;
+    @media (max-width: 818px) {
+        margin-left: 27%;
+    }
+    @media (max-width: 530px) {
+        margin-top: 25px;
+        margin-left: 40%;
+    }
 }

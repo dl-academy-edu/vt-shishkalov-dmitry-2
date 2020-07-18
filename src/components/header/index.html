@@ -2,15 +2,47 @@
   <a href="@@link">
     <img class="header__logo" src="/static/images/logo.svg" alt="logo" />
   </a>
+  <button class="header__link header__menu header__menu_js">Menu</button>
   <nav class="header__nav">
-    <ul class="header__list list-none">
-      <li><a class="header__link" href="/pages/Blog/index.html">Blog</a></li>
-      <li><a class="header__link" href="/pages/Catalog/index.html">Catalog</a></li>
-      <li><a class="header__link" href="/pages/Toys/index.html">Toys</a></li>
+    <ul class="header__list header__list-media list-none">
+      <li><a class="header__link" href="@@pagespages/blog/index.html">Blog</a></li>
+      <li><a class="header__link" href="@@pagespages/catalog/index.html">Catalog</a></li>
+      <li><a class="header__link" href="@@pagespages/toys/index.html">Toys</a></li>
+      <li><a class="header__link" href="@@pagespages/animation/index.html">Animation</a></li>
+      <li><a class="header__link" href="@@pagespages/svg/index.html">svg</a></li>
+      <li><a class="header__link" href="@@pagespages/grid/index.html">Grid</a></li>
     </ul>
     <ul class="header__list list-none">
       <li><img class="header__search" src="/static/images/search.png" alt="search" /></li>
-      <li><a class="header__link header__link_cont" href="/pages/Contact us/index.html">Contact Us</a></li>
+      <li><a class="header__link header__link_cont" href="@@pagespages/contact-us/index.html">Contact Us</a></li>
     </ul>
   </nav>
+  <div class="mobile-header mobile-header_js">
+    <div class="mobile-header__content">
+      <nav class="mobile-header__nav container">
+        <a href="@@link">
+          <img class="mobile-header__logo" src="/static/images/logo.svg" alt="logo" />
+        </a>
+        <button class="mobile-header__button mobile-header__button_js">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z"
+              fill="#1E0606" />
+          </svg>
+        </button>
+        <img class="mobile-header__search" src="/static/images/search.png" alt="search" />
+      </nav>
+      <ul class="mobile-header__list list-none">
+        <li><a class="mobile-header__link" href="@@pagespages/blog/index.html">Blog</a></li>
+        <li><a class="mobile-header__link" href="@@pagespages/catalog/index.html">Catalog</a></li>
+        <li><a class="mobile-header__link" href="@@pagespages/toys/index.html">Toys</a></li>
+        <li><a class="mobile-header__link" href="@@pagespages/animation/index.html">Animation</a></li>
+        <li><a class="mobile-header__link" href="@@pagespages/svg/index.html">svg</a></li>
+        <li><a class="mobile-header__link" href="@@pagespages/grid/index.html">Grid</a></li>
+        <li><a class="mobile-header__link mobile-header__link_bold" href="@@pagespages/contact-us/index.html">Contact
+            Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
